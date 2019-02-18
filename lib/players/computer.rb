@@ -21,12 +21,12 @@ module Players
 
     def smart_move(board)
       smart_move = WIN_COMBINATIONS.detect do |combo|
-        (board.cells[combo[0]] == "X" && board.cells[combo[1]] == "X") ||
-        (board.cells[combo[0]] == "O" && board.cells[combo[1]] == "O") ||
-        (board.cells[combo[1]] == "X" && board.cells[combo[2]] == "X") ||
-        (board.cells[combo[1]] == "O" && board.cells[combo[2]] == "O") ||
-        (board.cells[combo[0]] == "X" && board.cells[combo[2]] == "X") ||
-        (board.cells[combo[0]] == "O" && board.cells[combo[2]] == "O")
+        (board.cells[combo[0]] == "X" && board.cells[combo[1]] == "X" && board.cells[combo[2]] == " ") ||
+        (board.cells[combo[0]] == "O" && board.cells[combo[1]] == "O" && board.cells[combo[2]] == " ") ||
+        (board.cells[combo[1]] == "X" && board.cells[combo[2]] == "X" && board.cells[combo[0]] == " ") ||
+        (board.cells[combo[1]] == "O" && board.cells[combo[2]] == "O" && board.cells[combo[0]] == " ") ||
+        (board.cells[combo[0]] == "X" && board.cells[combo[2]] == "X" && board.cells[combo[1]] == " ") ||
+        (board.cells[combo[0]] == "O" && board.cells[combo[2]] == "O" && board.cells[combo[1]] == " ")
       end
 
       if smart_move != nil
