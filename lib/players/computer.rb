@@ -34,7 +34,7 @@ module Players
           board.cells[spot] == " "
         end
         if smart_input != nil
-          smart_input.to_s
+          (smart_input + 1).to_s
         else
           rand(1..9).to_s
         end
