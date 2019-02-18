@@ -125,7 +125,7 @@ class Game
     puts "   to exit, type no"
     @play_again_answer = gets.chomp
     if @play_again_answer == "yes"
-      welcome
+      Game.welcome
     end
   end
 
