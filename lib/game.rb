@@ -123,7 +123,7 @@ class Game
     puts "Would you like to play again?"
     puts "   to play again, type yes"
     puts "   to exit, type no"
-    @play_again_answer = gets
+    @play_again_answer = gets.chomp
     if @play_again_answer == "yes"
       welcome
     end
